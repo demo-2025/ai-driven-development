@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# GitHub Copilot Extensions
+.vscode/
+.vscode-test/
+.vscode-extensions/
