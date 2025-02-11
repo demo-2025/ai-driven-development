@@ -145,3 +145,75 @@
 ### 環境・サステナビリティ
 システムは、環境に配慮した設計が求められます。例えば、太陽光発電などの再生可能エネルギーを活用することが望ましいです。また、システムの運用においても、エネルギー効率の高い方法を採用することが求められます。
 
+## アプリケーションアーキテクチャ
+
+```mermaid
+graph TD;
+    A[ユーザー] -->|操作| B[フロントエンド]
+    B -->|APIリクエスト| C[バックエンド]
+    C -->|データ保存| D[データベース]
+    C -->|データ処理| E[Azure Functions]
+    E -->|データ送信| F[Power BI]
+    E -->|データ保存| D
+    D -->|データ取得| E
+    F -->|データ表示| A
+```
+
+## データモデル
+
+```mermaid
+erDiagram
+    USER {
+        int id
+        string name
+        string email
+    }
+    EQUIPMENT {
+        int id
+        string name
+        string status
+        int user_id
+    }
+    MAINTENANCE {
+        int id
+        date date
+        string description
+        int equipment_id
+    }
+    USER ||--o{ EQUIPMENT : owns
+    EQUIPMENT ||--o{ MAINTENANCE : has
+```
+
+## 画面遷移図
+
+```mermaid
+graph TD;
+    A[ログイン] --> B[ダッシュボード]
+    B --> C[設備一覧]
+    C --> D[設備詳細]
+    D --> E[メンテナンス履歴]
+    E --> F[メンテナンス詳細]
+    B --> G[アラート一覧]
+    G --> H[アラート詳細]
+    B --> I[データ分析]
+```
+
+## プロジェクトのマイルストーン
+
+```mermaid
+gantt
+    title プロジェクトマイルストーン
+    dateFormat  YYYY-MM-DD
+    section 準備
+    要件定義 :done, 2023-12-28, 2024-01-10
+    設計 :done, 2024-01-11, 2024-01-20
+    section 開発
+    フロントエンド開発 :active, 2024-01-21, 2024-02-20
+    バックエンド開発 :active, 2024-01-21, 2024-02-20
+    データベース構築 :active, 2024-01-21, 2024-02-10
+    section テスト
+    単体テスト : 2024-02-11, 2024-02-20
+    結合テスト : 2024-02-21, 2024-02-28
+    section リリース
+    初期リリース : 2024-03-01, 2024-03-10
+```
