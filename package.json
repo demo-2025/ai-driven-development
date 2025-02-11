@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "vue-router": "^4.5.0"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve"
+  }
+}
