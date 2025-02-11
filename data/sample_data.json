@@ -1,0 +1,42 @@
+{
+  "equipment": [
+    {
+      "id": 1,
+      "name": "コンベアベルト",
+      "status": "稼働中",
+      "user_id": 1
+    },
+    {
+      "id": 2,
+      "name": "ロボットアーム",
+      "status": "メンテナンス中",
+      "user_id": 2
+    },
+    {
+      "id": 3,
+      "name": "包装機",
+      "status": "停止中",
+      "user_id": 3
+    }
+  ],
+  "maintenance": [
+    {
+      "id": 1,
+      "date": "2024-01-15",
+      "description": "コンベアベルトのベルト交換",
+      "equipment_id": 1
+    },
+    {
+      "id": 2,
+      "date": "2024-01-20",
+      "description": "ロボットアームのグリースアップ",
+      "equipment_id": 2
+    },
+    {
+      "id": 3,
+      "date": "2024-01-25",
+      "description": "包装機のセンサー調整",
+      "equipment_id": 3
+    }
+  ]
+}
