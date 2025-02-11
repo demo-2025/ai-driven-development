@@ -5,15 +5,8 @@
 </template>
 
 <script>
-import Home from './components/Home.vue';
-import EquipmentStatus from './components/EquipmentStatus.vue';
-
 export default {
-  name: 'App',
-  components: {
-    Home,
-    EquipmentStatus
-  }
+  name: 'App'
 }
 </script>
 

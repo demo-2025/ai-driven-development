@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import sampleData from '../data/sample_data.json';
+import sampleData from '../../data/sample_data.json';
 
 export default {
-  name: 'EquipmentStatus',
+  name: 'EquipmentStatusView',
   data() {
     return {
       equipment: sampleData.equipment
